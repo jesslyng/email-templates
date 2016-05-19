@@ -1,0 +1,577 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>FlightCar redesign - new email template</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+     body {
+       width:600px;
+       background-color:#000;
+       margin: 0 auto;
+       padding:0;
+       font-family: 'Helvetica Neue', Helvetica, sans-serif;
+       line-height:1.4;
+       font-weight:lighter;
+     }
+
+     a {
+       text-decoration: none;
+       color:white;
+     }
+
+     table {
+       width:600px;
+       border-spacing:0;
+       padding:0;
+       margin:0;
+     }
+
+     tr {
+       padding:0;
+     }
+
+     td {
+       padding:0;
+     }
+
+     th {
+       text-align: left;
+       font-weight:normal;
+     }
+     ul {
+       margin:23px 0 49px 0;
+     }
+     .padding-left {
+       padding-left: 10px;
+     }
+     #header {
+       background-color:black;
+       padding:23px 49px;
+       height:107px;
+     }
+
+     #header td {
+       color:white;
+     }
+
+     #gradient {
+       padding:0;
+       height:6px;
+       font-size:0px;
+       background-color:#FF0768;
+     }
+
+     #background-picture {
+       background-color:#8c8c8c;
+       border:0;
+       padding:0;
+       border-spacing: 0;
+     }
+
+     #greeting {
+       border:0;
+       padding:49px 49px 36px 49px;
+       background-color:rgba(37,34,34,0.8);
+       color:white;
+     }
+
+     #greeting th {
+       font-weight:bold;
+       padding-bottom:12px;
+     }
+
+     .reservation {
+       border:0;
+       color:white;
+       padding:49px 49px 0 49px;
+       font-size:26px;
+     }
+
+     .reservation td {
+       font-weight:bold;
+       font-size:26px;
+     }
+
+     .reservation th {
+       font-weight:lighter;
+       font-size:26px;
+     }
+
+     #buttons_table {
+       padding:24px;
+       border-spacing:25px;
+       letter-spacing: 1px;
+     }
+
+     .button {
+       height:88px;
+       text-align: center;
+       color:white;
+       font-size:26px;
+       font-weight:700;
+     }
+
+     .button_transparent {
+       height:88px;
+       text-align: center;
+       color:white;
+       border:2px white solid;
+       font-size:1.4em;
+       font-weight:700;
+
+     }
+
+     .magenta {
+       background-color:#FF0768;
+     }
+
+     .magenta-secondary {
+       background-color:#DC095B;
+     }
+
+     .purple {
+       background-color:#B30FC6;
+     }
+
+     .purple-secondary {
+       background-color:#81298B;
+     }
+
+     .grey-light {
+       background-color:#8c8c8c;
+     }
+
+     .grey-dark {
+       background-color:#252222;
+     }
+
+     .transparent {
+       background-color:none;
+     }
+
+     #pickup {
+       border:0;
+       color:white;
+       padding:49px;
+       background-color:#252222;
+     }
+
+     #pickup_contact {
+       padding:0 49px 49px 49px;
+       margin:0;
+       background-color:#252222;
+     }
+
+     #pickup_contact td {
+       vertical-align: top;
+     }
+
+     #map {
+       background-color:#8C8C8C;
+       width:502px;
+       height:250px;
+     }
+
+     #expect {
+       background-color:white;
+       padding:49px;
+       font-size:26px;
+     }
+
+     .getapp {
+       background-color:#252222;
+       padding:49px 49px 0 49px;
+     }
+     .app-information {
+       background-color:#252222;
+       padding-top: 20px;
+     }
+     .app-information th {
+       color: white;
+       text-align: center;
+     }
+     #footer {
+       background-color:black;
+       color:white;
+       font-size:26px;
+       padding:14px 49px 49px 49px;
+     }
+
+     #footer td {
+       width: 50%;
+     }
+
+     #footer .th{
+       font-weight:bold;
+     }
+
+    </style>
+  </head>
+
+  <body>
+    <table id="header">
+      <tr>
+        <td><img src="https://s3-us-west-2.amazonaws.com/flightcar-emails/fc_logo_white.png" /></td>
+      </tr>
+    </table>
+    <table id="gradient" background="https://s3-us-west-2.amazonaws.com/flightcar-emails/gradient.png">
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+
+    <!-- CONTENT GOES HERE -->
+    <table id="background-picture" background="https://s3-us-west-2.amazonaws.com/flightcar-emails/bg_aus.png">
+      <tr>
+        <td>
+          <table id="greeting">
+            <tr>
+              <th style="font-size:26px;">Your Rental Dropoff Receipt</th>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td style="font-size: 26px">Hey {{first_name}}</td>
+            </tr>
+            <tr>
+              <td style="font-size:26px">Hope you enjoyed your FlightCar</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- DETAIL CONTENT -->
+      <tr>
+        <td>
+          <table class="reservation">
+            <tr>
+              <td style="font-weight:normal;white-space:nowrap;"><span>Your Reservation</span></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <th style="text-align: left">Airport</th>
+              <th style="text-align:right">Car</th>
+            </tr>
+            <tr>
+              <td style="text-align: left">{{ local_code }}</td>
+              <td style="text-align: right">{{color}} {{display }} {{class_display}}</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <th>Total Allowed Miles</th>
+            </tr>
+            <tr>
+              <td style="width:100%">{{miles_limit}} (100 miles/day)<em>Excess miles are charged $0.45/mile</em></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <th style="text-align:left;">Picked Up Date</th>
+              <th style="text-align:right;">Picked Up Time</th>
+            </tr>
+            <tr>
+              <td style="text-align:left;">{{checkin_month}} {{ checkin_day }}, {{start_year}}</td>
+              <td style="text-align:right;">{{ checkin_hour }}:{{ checkin_minute }} {{ checkin_ampm }}</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <th style="text-align:left;">Picked Up Miles</th>
+              <th style="text-align:right;">Picked Up Gas</th>
+            </tr>
+            <tr>
+              <td style="text-align:left;">{{checkin_mileage}}</td>
+              <td style="text-align:right;">{{checkin_gas}}/8</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <th style="text-align:left;">Mileage Limit</th>
+            </tr>
+            <tr>
+              <td>{{miles_limit}} miles</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <th style="text-align:left;">Dropoff Date</th>
+              <th style="text-align:right;width: 100%">Dropoff Time</th>
+            </tr>
+            <tr>
+              <td style="text-align:left;">{{checkout_month}} {{ checkout_day}}, {{ checkout_year }}</td>
+              <td style="text-align:right;">{{ checkout_hour }}:{{ checkout_minute }} {{ checkout_ampm }}</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <th style="text-align:left;">Picked Up Miles</th>
+              <th style="text-align:right;">Picked Up Gas</th>
+            </tr>
+            <tr>
+              <td style="text-align:left;">{{checkout_mileage}}</td>
+              <td style="text-align:right;">{{checkout_gas}}/8</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <th style="text-align:left;">Mileage Limit</th>
+            </tr>
+            <tr>
+              <td>{{driven}} miles</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" style="background: white">
+      <tbody>
+        <tr>
+          <td valign="top">
+            <table align="right" border="0" cellpadding="0" cellspacing="0">
+              <tbody><tr>
+                <td valign="top" style="padding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:300px">
+                  <strong>{{duration}} Days</strong>
+                  <hr><strong>Rental Total: ${{total_charges}}</strong>
+                </td>
+              </tr>
+              </tbody></table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <table border="0" cellpadding="0" cellspacing="0" style="background: white">
+      <tbody>
+        <tr>
+          <td valign="top">
+            <table align="left" border="0" cellpadding="0" cellspacing="0" width="600">
+              <tbody>
+                <tr>
+                  <td valign="top" style="padding-top:9px;padding-bottom:9px;">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr>
+                          <td align="center" valign="top" width="40%">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tbody>
+                                <tr>
+                                  <td width="40%"> </td>
+                                  <td width="20%" class="padding-left">    Price</td>
+                                  <td width="20%">    Quantity</td>
+                                  <td width="20%">     Total</td>
+                                </tr>
+
+                                <tr>
+                                  <td width="40%"><hr></td>
+                                  <td width="20%"><hr></td>
+                                  <td width="20%"><hr></td>
+                                  <td width="20%"><hr></td>
+                                </tr>
+                                <tr>
+                                  <td width="40%" class="padding-left"> Rental</td>
+                                  <td width="20%"> ${{price}}</td>
+                                  <td width="20%"> {{duration}} Days</td>
+                                  <td width="20%"> ${{price_total}}</td>
+                                </tr>
+
+                                <tr>
+                                  <td width="40%"><hr></td>
+                                  <td width="20%"><hr></td>
+                                  <td width="20%"><hr></td>
+                                  <td width="20%"><hr></td>
+                                </tr>
+
+                                <tr>
+                                  <td width="40%" class="padding-left"> {{insurance_type}}</td>
+                                  <td width="20%"> ${{insurance_price}}</td>
+                                  <td width="20%"> {{duration}} Days</td>
+                                  <td width="20%"> ${{insurance_total}}</td>
+                                </tr>
+
+                                <tr>
+                                  <td width="40%"><hr></td>
+                                  <td width="20%"><hr></td>
+                                  <td width="20%"><hr></td>
+                                  <td width="20%"><hr></td>
+                                </tr>
+
+                                <tr>
+                                  <td width="40%" class="padding-left"> Miles Overage</td>
+                                  <td width="20%"> $0.45</td>
+                                  <td width="20%"> {{overage_miles}} Miles</td>
+                                  <td width="20%"> ${{overage_total}}</td>
+                                </tr> 
+
+                                <tr>
+                                  <td width="40%"><hr></td>
+                                  <td width="20%"><hr></td>
+                                  <td width="20%"><hr></td>
+                                  <td width="20%"><hr></td>
+                                </tr>
+
+                                <tr>
+                                  <td width="40%" class="padding-left"> Gas  (Fee + Fuel)</td>
+                                  <td width="20%"> $4.25</td>
+                                  <td width="20%"> {{gas_used}}/8 Tank</td>
+                                  <td width="20%"> ${{gas_total}}</td>
+                                </tr>
+
+                                <tr>
+                                  <td width="40%"><hr></td>
+                                  <td width="20%"><hr></td>
+                                  <td width="20%"><hr></td>
+                                  <td width="20%"><hr></td>
+                                </tr>
+
+                                <tr>
+                                  <td width="40%" class="padding-left"> Other Charges</td>
+                                  <td width="20%"> -</td>
+                                  <td width="20%"> -</td>
+                                  <td width="20%"> ${{other_total}}</td>
+                                </tr>
+
+                                <tr>
+                                  <td width="40%"><hr></td>
+                                  <td width="20%"><hr></td>
+                                  <td width="20%"><hr></td>
+                                  <td width="20%"><hr></td>
+                                </tr>
+
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr></tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background: white">
+      <tbody>
+        <tr>
+          <td valign="top">
+            <table align="left" border="0" cellpadding="0" cellspacing="0" width="600">
+              <tbody>
+                <tr>
+                <td valign="top" style="padding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:18px">
+                  <strong><span style="font-size:18px">Rental Total: ${{total_charges}}</span></strong><br>
+                  <br>
+                  <strong>Security Deposit </strong><br>
+                  The security hold placed on your card will be refunded within 3 business days.
+                </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="footer">
+      <tr>
+        <td class="th">How it Works</td>
+        <td class="th">Locations</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.flightcar.com/sharing-learn-more">As An Owner</a></td>
+        <td>
+          <a href="https://www.flightcar.com/sharing/AUS/car">Austin, TX</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://www.flightcar.com/renter-learn-more">As a Renter</a>
+        </td>
+        <td>
+          <a href="https://www.flightcar.com/sharing/BOS/car">Boston, MA</a>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <a href="https://flightcar.com/sharing/locations">Denver, CO</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="th">Use Our App</td>
+        <td>
+          <a href="https://flightcar.com/sharing/locations">Dallas Ft. Worth, TX</a>
+        </td>
+      </tr>
+      <tr>
+        <td><a href="http://appstore.com/flightcar">iOS App</a></td>
+        <td>
+          <a href="https://flightcar.com/sharing/locations">Newark, NJ</a>
+        </td>
+      </tr>
+      <tr>
+        <td><a href="https://play.google.com/store/apps/details?id=com.flightcar">Android App</a></td>
+        <td>
+          <a href="https://flightcar.com/sharing/locations">Washington D.C., VA</a>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <a href="https://flightcar.com/locations">Los Angeles, CA</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="th">Follow Us</td>
+        <td>
+          <a href="https://flightcar.com/locations">Oakland, CA</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="facebook.com/flightcar">Facebook</href>
+        </td>
+        <td>
+          <a href="https://flightcar.com/locations">San Diego, CA</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="twitter.com/flightcar">Twitter</a>
+        </td>
+        <td>
+          <a href="https://flightcar.com/locations">Seattle, WA</a>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <a href="https://flightcar.com/locations">San Francisco, CA</a>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <a href=https://flightcar.com/locations">San Jose, CA</a>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <a href=https://flightcar.com/locations">More coming soon!</a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
