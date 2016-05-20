@@ -222,56 +222,63 @@
         <td>&nbsp;</td>
       </tr>
     </table>
-    <table id="background-picture" background="https://s3-us-west-2.amazonaws.com/flightcar-emails/bg_aus.png">
+
+    <table id="background-picture">
       <tr>
         <td>
           <table id="greeting">
             <tr>
-              <th>Your Car is Back!</th>
+              <th class="small-header">Your Car Was Rented!</th>
             </tr>
             <tr>
-              <th>Hey {{car_owner}}</th>
+              <th class="small-header">Hey {{car_owner}},</th>
             </tr>
             <tr>
-              <td>Thanks for parking with us! Hope you had a great trip.</td>
+              <td class="small-header">We just wanted to let you know that a fellow FlightCar member rented your car. You’re saving a fellow member some cash and earning some for yourself!</td>
             </tr>
           </table>
         </td>
       </tr>
+      <!-- DETAIL CONTENT -->
       <tr>
         <td>
           <table class="reservation">
             <tr>
-              <td>Return Date</td>
-              <td>Return Time</td>
+              <td colspan="2" class="big-header">
+                <img class="icon" src="https://s3-us-west-2.amazonaws.com/flightcar-emails/reserve.png" />
+                <span>Your Car</span>
+              </td>
             </tr>
             <tr>
-              <th>{{checkout_month}} {{checkout_day}}</th>
-              <th>{{checkout_hour}}:{{checkout_minute}} {{checkout_ampm}}</th>
+              <td>&nbsp;</td>
             </tr>
             <tr>
-              <td>Miles</td>
+              <th>License Plate</th>
+              <th>Car Details</th>
+            </tr>
+            <tr>
+              <td>{{ plate }}</td>
               <td>{{ color }} {{year}} {{model}}</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
             </tr>
             <tr>
-              <th>Picked Up Miles</th>
-              <th>Picked Up Gas</th>
+              <th>Return Date</th>
+              <th >Return Time</th>
             </tr>
             <tr>
-              <td>{{checkin_mileage }}</td>
-              <td>{{checkin_gas}}</td>
+              <td>{{end_month }} {{end_day}}</td>
+              <td>{{end_hour}} {{end_minute}} {{end_ampm}}</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
             </tr>
             <tr>
-              <th>Mileage Limit</th>
+              <th>Mileage Payout</th>
             </tr>
             <tr>
-              <td>{{miles_limit}}</td>
+              <td>${{mileage_rate}} per mile<br> 75 mile/listing limit<br>($0.40/mile for excess miles)</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
@@ -282,141 +289,36 @@
             </tr>
             <tr>
               <td>{{ checkin_month }} {{ checkin_day }}</td>
-              <td>{{ checkin_hour }}:{{ checkin_minute }} {{ checkin_ampm }}</td>
+              <td>{{ checkin_hour }} {{ checkin_minute }} {{ checkin_ampm }}</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
             </tr>
             <tr>
-              <th>Dropoff Date</th>
-              <th>Dropoff Time</th>
+              <td><strong>Your car is covered with our $1,000,000 insurance policy</strong></td>
             </tr>
             <tr>
-              <td>{{end_month}} {{end_day}}</td>
-              <td>{{end_hour}}:{{end_minutes}} {{end_ampm}}</td>
+              <td>
+                <a href="https://www.flightcar.com/trustandsafety">Trust and Safety</a>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>Hope you're enjoying your trip!</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
             </tr>
             <tr>
-              <th>Rental Duration</th>
+              <td>Cheers,</td>
             </tr>
             <tr>
-              <td>{{duration}} days</td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
+              <td>The FlightCar Crew</td>
             </tr>
           </table>
         </td>
-      </tr>
-      <tr>
-        <td>
-          <table id="buttons_table">
-            <tr>
-              <td class="button_transparent"><a href="mailto:support@flightcar.com">CONTACT FLIGHTCAR</a></td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-
-    <table class="getapp">
-      <tr>
-        <th class="big-header">
-          <img class="icon" src="https://s3-us-west-2.amazonaws.com/flightcar-emails/getapp_icon.png" />
-          <span class="light-text">Get the App</span>
-        </th>
-      </tr>
-    </table>
-    <table class="app-information">
-      <tr>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <th>Use the app to request a pickup!</th>
-      </tr>
-    </table>
-    <table class="getapp">
-      <tr>
-        <td class="button magenta app-btn"><a href="http://appstore.com/flightcar">iOS</a></td>
-        <td>&nbsp;</td>
-        <td class="button purple app-btn" ><a href="https://play.google.com/store/apps/details?id=com.flightcar.android">ANDROID</td>
-      </tr>
-    </table>
-    <table class="app-information">
-      <tr>
-        <th ><p class="max-measure">Should you have trouble with the app call us at <br>1-844-PICKUP-0 (1-844-742-5870) and reference Pickup Code {{pickupcode}}</p></th>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-      </tr>
-    </table>
-    <table id="pickup"> <!-- table for map & heading -->
-      <tr>
-        <td class="big-header">
-          <img class="icon" src="https://s3-us-west-2.amazonaws.com/flightcar-emails/pickup.png" />
-          <span>Pickup Location</span>
-        </td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-      </tr>
-      <tr> <!-- actual map goes here -->
-        <td class="map" id="map">
-          <a href="{{ lot_google_maps_url }}"><img src="{{ lot_map }}"/></a>
-        </td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td class="button magenta"><a href="#">GET DIRECTIONS</td>
-      </tr>
-    </table>
-    <table class="reservation" id="pickup_contact"> <!-- table for facility info -->
-      <tr>
-        <th>Station Location</th>
-        <th >Station Phone</th>
-      </tr>
-      <tr>
-        <td>{{ lot_street }}<br>{{ lot_city }}, {{ lot_state }}</td>
-        <td >1-844-742-05870</td>
-      </tr>
-    </table>
-    <table id="expect">
-      <tr>
-        <td class="big-header">What to Expect</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td><strong>Security Deposity</strong></td>
-      </tr>
-      <tr>
-        <td>Your security deposit will be returned to your card at the end of your rental.</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td><strong>Smoking</strong></td>
-      </tr>
-      <tr>
-        <td>To protect vehicles from damage and vehicle owners from hazardous fumes, smoking is not permitted in your rental vehicle. Any evidence of smoking occurring in the vehicle will result in a cleaning charge of up to $1,000.</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td><strong>Rental Dropoff</strong></td>
-      </tr>
-      <tr>
-        <td>Return your FlightCar to the pickup location at the end of your rental period, allowing ample time for airport transportation. We’ll arrange for transportation to take you back to the airport.</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
       </tr>
     </table>
     <table id="footer">

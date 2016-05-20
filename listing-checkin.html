@@ -222,19 +222,18 @@
         <td>&nbsp;</td>
       </tr>
     </table>
-
     <table id="background-picture" >
       <tr>
         <td>
           <table id="greeting">
             <tr>
-              <th class="small-header">Your Rental Pickup Receipt</th>
+              <th class="small-header">Owner Dropoff Receipt</th>
             </tr>
             <tr>
-              <th class="small-header">Hey {{first_name}}</th>
+              <th class="small-header">Hey {{first_name}},</th>
             </tr>
             <tr>
-              <td class="small-header">Thanks for renting through FlightCar!</t>
+              <td class="small-header">Thanks for using FlightCar!</t>
             </tr>
           </table>
               </td>
@@ -254,7 +253,7 @@
               <td>&nbsp;</td>
             </tr>
             <tr>
-              <th>Picked Up Location</th>
+              <th>Dropoff Location</th>
               <th>Your Car</th>
             </tr>
             <tr>
@@ -265,21 +264,23 @@
               <td>&nbsp;</td>
             </tr>
             <tr>
-              <th >Picked Up Miles</th>
-              <th >Picked Up Gas</th>
+              <th>Dropoff Date</th>
+              <th>Dropoff Time</th>
             </tr>
             <tr>
-              <td>{{checkin_mileage }}</td>
-              <td>{{checkin_gas}}</td>
+              <td>{{start_month}} {{start_day}}</td>
+              <td>{{start_hour}} {{start_minute}} {{start_ampm}}</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
             </tr>
             <tr>
-              <th>Mileage Limit</th>
+              <th>Mileage</th>
+              <th>Gas</th>
             </tr>
             <tr>
-              <td>{{miles_limit}}</td>
+              <td>{{mileage}}</td>
+              <td>{{gas}}</td>
             </tr>
             <tr>
               <td>&nbsp;</td>

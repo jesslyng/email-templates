@@ -1,0 +1,439 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>FlightCar redesign - new email template</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" >
+    <style type="text/css">
+     body {
+       width: 600px;
+       background-color:#000;
+       margin: 0 auto;
+       padding:0;
+       font-family: 'Helvetica Neue', Helvetica, sans-serif;
+       line-height:1.4;
+       font-weight:lighter;
+     }
+     a {
+       color:white;
+     }
+     table {
+
+       width: 100%;
+       border-spacing:0;
+       padding:0;
+       margin:0;
+     }
+     tr {
+       padding:0;
+     }
+     td {
+       padding:0;
+     }
+     th {
+       text-align: left;
+       font-weight: 100;
+     }
+     ul {
+       margin:23px 0 49px 0;
+     }
+     .padding-left {
+       padding-left: 10px;
+     }
+     #header {
+       background-color:black;
+       padding:23px 49px;
+       height:107px;
+     }
+     #header td {
+       color:white;
+     }
+     #gradient {
+       padding:0;
+       height:6px;
+       font-size:0px;
+       background-color:#FF0768;
+     }
+     #background-picture {
+       background-image: url("https://s3-us-west-2.amazonaws.com/flightcar-emails/aus_bg1.png");
+       background-color:#8c8c8c;
+       border:0;
+       padding:0;
+       border-spacing: 0;
+     }
+     #greeting {
+       border:0;
+       padding:49px 49px 36px 49px;
+       background-color:rgba(37,34,34,0.8);
+       color:white;
+     }
+     #greeting th {
+       font-weight:bold;
+       padding-bottom:12px;
+     }
+     .reservation {
+       border:0;
+       color:white;
+       padding:49px 49px 0 49px;
+       font-size:26px;
+     }
+     .reservation td {
+       font-weight:bold;
+       font-size:26px;
+     }
+     .reservation th {
+       font-weight:lighter;
+       font-size:26px;
+     }
+     #buttons_table {
+       padding:24px;
+       border-spacing:25px;
+       letter-spacing: 1px;
+     }
+     .button {
+       height:88px;
+       text-align: center;
+       color:white;
+       font-size:26px;
+       font-weight:700;
+     }
+     .button_transparent {
+       height:88px;
+       text-align: center;
+       color:white;
+       border:2px white solid;
+       font-size:1.4em;
+       font-weight:700;
+     }
+     .magenta {
+       background-color:#FF0768;
+     }
+     .app-btn {
+       text-align: center;
+     }
+     .app-btn a {
+       text-decoration: none;
+       display: inline-block;
+       min-width: 200px;
+       width: 100%;
+     }
+     .magenta-secondary {
+       background-color:#DC095B;
+     }
+     .purple {
+       background-color:#B30FC6;
+     }
+     .purple-secondary {
+       background-color:#81298B;
+     }
+     .grey-light {
+       background-color:#8c8c8c;
+     }
+     .light-text {
+       color: white;
+     }
+     .grey-dark {
+       background-color:#252222;
+     }
+     .transparent {
+       background-color:none;
+     }
+     #pickup {
+       border:0;
+       color:white;
+       padding:49px;
+       background-color:#252222;
+     }
+     #pickup .map img {
+       max-width: 100%;
+     }
+     #pickup_contact {
+       padding:0 49px 49px 49px;
+       margin:0;
+       background-color:#252222;
+     }
+     #pickup_contact td {
+       vertical-align: top;
+     }
+
+     #map {
+       background-color:#8C8C8C;
+       width:502px;
+       height:250px;
+     }
+     #expect {
+       background-color:white;
+       padding:49px;
+       font-size:18px;
+     }
+     .getapp {
+       background-color:#252222;
+       padding:49px 49px 0 49px;
+     }
+     .app-information {
+       background-color:#252222;
+       padding-top: 20px;
+     }
+     .app-information th {
+       color: white;
+       text-align: center;
+     }
+     #footer {
+       background-color:black;
+       color:white;
+       font-size:16px;
+       padding:14px 49px 49px 49px;
+     }
+     .max-measure {
+       width: 24em;
+       margin: 0 auto;
+     }
+     #footer td {
+       width: 50%;
+     }
+     #footer .th{
+       font-weight:bold;
+     }
+     .big-header {
+       font-size: 32px
+     }
+     .small-header {
+       font-size: 18px;
+     }
+     .icon {
+       max-height: 1em;
+       min-height: 1em;
+       height: 1em;
+       width: auto;
+       display: inline-block;
+       vertical-align: top;
+       margin-right: 0.25em;
+     }
+    </style>
+  </head>
+  <body>
+    <table id="header">
+      <tr>
+        <td><img src="https://s3-us-west-2.amazonaws.com/flightcar-emails/fc_logo_white.png" /></td>
+      </tr>
+    </table>
+    <table id="gradient" background="https://s3-us-west-2.amazonaws.com/flightcar-emails/gradient.png">
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+    <table id="background-picture" >
+      <tr>
+        <td>
+          <table id="greeting">
+            <tr>
+              <th class="small-header">Your Dropoff Receipt</th>
+            </tr>
+            <tr>
+              <th class="small-header">Hey {{first_name}},</th>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="small-header">Thanks for parking with us!</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="small-header"><b>Your Confirmation Code: {{confirmation}}</b></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- DETAIL CONTENT -->
+      <tr>
+        <td>
+          <table class="reservation">
+            <tr>
+              <td colspan="2" class="big-header">
+                <img class="icon" src="https://s3-us-west-2.amazonaws.com/flightcar-emails/reserve.png" />
+                <span>Your Car</span>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <th>License Plate</th>
+              <th>Your Car</th>
+            </tr>
+            <tr>
+              <td>{{ plate }}</td>
+              <td>{{ color }} {{year}} {{model}}</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <th >Dropoff Mileage</th>
+              <th >Dropoff Gas</th>
+            </tr>
+            <tr>
+              <td>{{mileage }}</td>
+              <td>{{gas}}/8 full</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <th>Dropoff Date</th>
+              <th>Dropoff Time</th>
+            </tr>
+            <tr>
+              <td>{{start_month}} {{start_day}}</td>
+              <td>{{start_hour}} {{start_minute}} {{start_ampm}}</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <th>Listing Duration</th>
+            </tr>
+            <tr>
+              <td>{{ days }} Days</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <table id="buttons_table">
+            <tr>
+              <td class="button_transparent"><a href="mailto:support@flightcar.com">CONTACT FLIGHTCAR</a></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <table class="getapp">
+      <tr>
+        <th class="big-header">
+          <img class="icon" src="https://s3-us-west-2.amazonaws.com/flightcar-emails/getapp_icon.png" />
+          <span class="light-text">Get the App</span>
+        </th>
+      </tr>
+    </table>
+    <table class="app-information">
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>Use the app to request a pickup!</th>
+      </tr>
+    </table>
+    <table class="getapp">
+      <tr>
+        <td class="button magenta app-btn"><a href="http://appstore.com/flightcar">iOS</a></td>
+        <td>&nbsp;</td>
+        <td class="button purple app-btn" ><a href="https://play.google.com/store/apps/details?id=com.flightcar.android">ANDROID</td>
+      </tr>
+    </table>
+    <table class="app-information">
+      <tr>
+        <th ><p class="max-measure">Should you have trouble with the app call us at <br>1-844-PICKUP-0 (1-844-742-5870) and reference Pickup Code {{pickupcode}}</p></th>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+    <table id="footer">
+      <tr>
+        <td class="th">How it Works</td>
+        <td class="th">Locations</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.flightcar.com/sharing-learn-more">As An Owner</a></td>
+        <td>
+          <a href="https://www.flightcar.com/sharing/AUS/car">Austin, TX</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://www.flightcar.com/renter-learn-more">As a Renter</a>
+        </td>
+        <td>
+          <a href="https://www.flightcar.com/sharing/BOS/car">Boston, MA</a>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <a href="https://flightcar.com/sharing/locations">Denver, CO</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="th">Use Our App</td>
+        <td>
+          <a href="https://flightcar.com/sharing/locations">Dallas Ft. Worth, TX</a>
+        </td>
+      </tr>
+      <tr>
+        <td><a href="http://appstore.com/flightcar">iOS App</a></td>
+        <td>
+          <a href="https://flightcar.com/sharing/locations">Newark, NJ</a>
+        </td>
+      </tr>
+      <tr>
+        <td><a href="https://play.google.com/store/apps/details?id=com.flightcar">Android App</a></td>
+        <td>
+          <a href="https://flightcar.com/sharing/locations">Washington D.C., VA</a>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <a href="https://flightcar.com/locations">Los Angeles, CA</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="th">Follow Us</td>
+        <td>
+          <a href="https://flightcar.com/locations">Oakland, CA</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="facebook.com/flightcar">Facebook</href>
+        </td>
+        <td>
+          <a href="https://flightcar.com/locations">San Diego, CA</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="twitter.com/flightcar">Twitter</a>
+        </td>
+        <td>
+          <a href="https://flightcar.com/locations">Seattle, WA</a>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <a href="https://flightcar.com/locations">San Francisco, CA</a>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <a href=https://flightcar.com/locations">San Jose, CA</a>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <a href=https://flightcar.com/locations">More coming soon!</a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
