@@ -2,9 +2,10 @@
   <head>
     <title>FlightCar redesign - new email template</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" >
     <style type="text/css">
      body {
-       width:600px;
+       width: 600px;
        background-color:#000;
        margin: 0 auto;
        padding:0;
@@ -12,94 +13,82 @@
        line-height:1.4;
        font-weight:lighter;
      }
-
      a {
-       text-decoration: none;
        color:white;
      }
-
      table {
-       width:600px;
+
+       width: 100%;
        border-spacing:0;
        padding:0;
        margin:0;
      }
-
      tr {
        padding:0;
      }
-
      td {
        padding:0;
      }
-
      th {
        text-align: left;
-       font-weight:normal;
+       font-weight: 100;
      }
      ul {
        margin:23px 0 49px 0;
      }
-
+     .padding-left {
+       padding-left: 10px;
+     }
      #header {
        background-color:black;
        padding:23px 49px;
        height:107px;
      }
-
      #header td {
        color:white;
      }
-
      #gradient {
        padding:0;
        height:6px;
        font-size:0px;
        background-color:#FF0768;
      }
-
      #background-picture {
+       background-image: url("https://s3-us-west-2.amazonaws.com/flightcar-emails/aus_bg1.png");
        background-color:#8c8c8c;
        border:0;
        padding:0;
        border-spacing: 0;
      }
-
      #greeting {
        border:0;
        padding:49px 49px 36px 49px;
        background-color:rgba(37,34,34,0.8);
        color:white;
      }
-
      #greeting th {
        font-weight:bold;
        padding-bottom:12px;
      }
-
      .reservation {
        border:0;
        color:white;
        padding:49px 49px 0 49px;
        font-size:26px;
      }
-
      .reservation td {
        font-weight:bold;
        font-size:26px;
      }
-
      .reservation th {
        font-weight:lighter;
        font-size:26px;
      }
-
      #buttons_table {
        padding:24px;
        border-spacing:25px;
        letter-spacing: 1px;
      }
-
      .button {
        height:88px;
        text-align: center;
@@ -107,7 +96,6 @@
        font-size:26px;
        font-weight:700;
      }
-
      .button_transparent {
        height:88px;
        text-align: center;
@@ -115,50 +103,54 @@
        border:2px white solid;
        font-size:1.4em;
        font-weight:700;
-
      }
-
      .magenta {
        background-color:#FF0768;
      }
-
+     .app-btn {
+       text-align: center;
+     }
+     .app-btn a {
+       text-decoration: none;
+       display: inline-block;
+       min-width: 200px;
+       width: 100%;
+     }
      .magenta-secondary {
        background-color:#DC095B;
      }
-
      .purple {
        background-color:#B30FC6;
      }
-
      .purple-secondary {
        background-color:#81298B;
      }
-
      .grey-light {
        background-color:#8c8c8c;
      }
-
+     .light-text {
+       color: white;
+     }
      .grey-dark {
        background-color:#252222;
      }
-
      .transparent {
        background-color:none;
      }
-
      #pickup {
        border:0;
        color:white;
        padding:49px;
        background-color:#252222;
      }
-
+     #pickup .map img {
+       max-width: 100%;
+     }
      #pickup_contact {
        padding:0 49px 49px 49px;
        margin:0;
        background-color:#252222;
      }
-
      #pickup_contact td {
        vertical-align: top;
      }
@@ -168,33 +160,54 @@
        width:502px;
        height:250px;
      }
-
      #expect {
        background-color:white;
        padding:49px;
-       font-size:26px;
+       font-size:18px;
      }
-
      .getapp {
        background-color:#252222;
        padding:49px 49px 0 49px;
      }
-
+     .app-information {
+       background-color:#252222;
+       padding-top: 20px;
+     }
+     .app-information th {
+       color: white;
+       text-align: center;
+     }
      #footer {
        background-color:black;
        color:white;
-       font-size:26px;
+       font-size:16px;
        padding:14px 49px 49px 49px;
      }
-
+     .max-measure {
+       width: 24em;
+       margin: 0 auto;
+     }
      #footer td {
        width: 50%;
      }
-
      #footer .th{
        font-weight:bold;
      }
-
+     .big-header {
+       font-size: 32px
+     }
+     .small-header {
+       font-size: 18px;
+     }
+     .icon {
+       max-height: 1em;
+       min-height: 1em;
+       height: 1em;
+       width: auto;
+       display: inline-block;
+       vertical-align: top;
+       margin-right: 0.25em;
+     }
     </style>
   </head>
 
@@ -207,22 +220,21 @@
     <table id="gradient" background="https://s3-us-west-2.amazonaws.com/flightcar-emails/gradient.png">
       <tr>
         <td>&nbsp;</td>
-        <tr>
+      </tr>
     </table>
 
-    <!-- CONTENT GOES HERE -->
-    <table id="background-picture" background="https://s3-us-west-2.amazonaws.com/flightcar-emails/bg_aus.png">
+    <table id="background-picture" >
       <tr>
         <td>
           <table id="greeting">
             <tr>
-              <th style="font-size:26px;">Owner Dropoff Receipt</th>
+              <th class="small-header">Your Rental Pickup Receipt</th>
             </tr>
             <tr>
-              <th style="font-size:26px; padding-bottom:10px;">Hey {{first_name}},</th>
+              <th class="small-header">Hey {{first_name}}</th>
             </tr>
             <tr>
-              <td style="font-size:26px; padding-bottom:10px;">Thanks for using FlightCar!</t>
+              <td class="small-header">Thanks for renting through FlightCar!</t>
             </tr>
           </table>
               </td>
@@ -233,40 +245,72 @@
         <td>
           <table class="reservation">
             <tr>
-              <td style="font-size:40px; font-weight:normal;"><img src="https://s3-us-west-2.amazonaws.com/flightcar-emails/reserve.png" height=38 padding:0 margin:0 /><span style="white-space:nowrap">Your Car</span></td>
+              <td colspan="2" class="big-header">
+                <img class="icon" src="https://s3-us-west-2.amazonaws.com/flightcar-emails/reserve.png" />
+                <span>Your Car</span>
+              </td>
             </tr>
             <tr>
               <td>&nbsp;</td>
             </tr>
             <tr>
-              <th style="text-align:left;">Dropoff Location</th>
-              <th style="text-align:right;">Your Car</th>
+              <th>Picked Up Location</th>
+              <th>Your Car</th>
             </tr>
             <tr>
-              <td style="text-align:left;">{{ local_code }}</td>
-              <td style="text-align:right;">{{ color }} {{year}} {{model}}</td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <th style="text-align:left;">Dropped Off Date</th>
-              <th style="text-align:right;">Dropoff Time</th>
-            </tr>
-            <tr>
-              <td style="text-align:left;">{{ start_month }} {{ start_day }}</td>
-              <td style="text-align:right;">{{ start_hour }}:{{ start_minute }} {{ start_ampm }}</td>
+              <td>{{ local_code }}</td>
+              <td>{{ color }} {{year}} {{model}}</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
             </tr>
             <tr>
-              <th style="text-align:left;">Mileage</th>
-              <th style="text-align:right;">Gas</th>
+              <th >Picked Up Miles</th>
+              <th >Picked Up Gas</th>
             </tr>
             <tr>
-              <td style="text-align:left;">{{mileage}}</td>
-              <td style="text-align:right;">{{ end_hour }}:{{ end_minute }} {{ end_ampm }}</td>
+              <td>{{checkin_mileage }}</td>
+              <td>{{checkin_gas}}</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <th>Mileage Limit</th>
+            </tr>
+            <tr>
+              <td>{{miles_limit}}</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <th>Picked Up Date</th>
+              <th>Picked Up Time</th>
+            </tr>
+            <tr>
+              <td>{{ checkin_month }} {{ checkin_day }}</td>
+              <td>{{ checkin_hour }} {{ checkin_minute }} {{ checkin_ampm }}</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <th>Dropoff Date</th>
+              <th>Dropoff Time</th>
+            </tr>
+            <tr>
+              <td>{{end_month}} {{end_day}}</td>
+              <td>{{end_hour}} {{end_minutes}} {{end_ampm}}</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <th>Rental Duration</th>
+            </tr>
+            <tr>
+              <td>{{duration}} days</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
@@ -282,6 +326,104 @@
             </tr>
           </table>
         </td>
+      </tr>
+    </table>
+    <table class="getapp">
+      <tr>
+        <th class="big-header">
+          <img class="icon" src="https://s3-us-west-2.amazonaws.com/flightcar-emails/getapp_icon.png" />
+          <span class="light-text">Get the App</span>
+        </th>
+      </tr>
+    </table>
+    <table class="app-information">
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>Use the app to request a pickup!</th>
+      </tr>
+    </table>
+    <table class="getapp">
+      <tr>
+        <td class="button magenta app-btn"><a href="http://appstore.com/flightcar">iOS</a></td>
+        <td>&nbsp;</td>
+        <td class="button purple app-btn" ><a href="https://play.google.com/store/apps/details?id=com.flightcar.android">ANDROID</td>
+      </tr>
+    </table>
+    <table class="app-information">
+      <tr>
+        <th ><p class="max-measure">Should you have trouble with the app call us at <br>1-844-PICKUP-0 (1-844-742-5870) and reference Pickup Code {{pickupcode}}</p></th>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+    <table id="pickup"> <!-- table for map & heading -->
+      <tr>
+        <td class="big-header">
+          <img class="icon" src="https://s3-us-west-2.amazonaws.com/flightcar-emails/pickup.png" />
+          <span>Pickup Location</span>
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr> <!-- actual map goes here -->
+        <td class="map" id="map">
+          <a href="{{ lot_google_maps_url }}"><img src="{{ lot_map }}"/></a>
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="button magenta"><a href="#">GET DIRECTIONS</td>
+      </tr>
+    </table>
+    <table class="reservation" id="pickup_contact"> <!-- table for facility info -->
+      <tr>
+        <th>Station Location</th>
+        <th >Station Phone</th>
+      </tr>
+      <tr>
+        <td>{{ lot_street }}<br>{{ lot_city }}, {{ lot_state }}</td>
+        <td >1-844-742-05870</td>
+      </tr>
+    </table>
+    <table id="expect">
+      <tr>
+        <td class="big-header">What to Expect</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><strong>Security Deposity</strong></td>
+      </tr>
+      <tr>
+        <td>Your security deposit will be returned to your card at the end of your rental.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><strong>Smoking</strong></td>
+      </tr>
+      <tr>
+        <td>To protect vehicles from damage and vehicle owners from hazardous fumes, smoking is not permitted in your rental vehicle. Any evidence of smoking occurring in the vehicle will result in a cleaning charge of up to $1,000.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><strong>Rental Dropoff</strong></td>
+      </tr>
+      <tr>
+        <td>Return your FlightCar to the pickup location at the end of your rental period, allowing ample time for airport transportation. We’ll arrange for transportation to take you back to the airport.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
       </tr>
     </table>
     <table id="footer">
